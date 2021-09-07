@@ -2,19 +2,19 @@ version: "3"
 services:
 
   node-js-1:
-    build: ./Nodejs-express-testapp-1
+    build: ./app1
     ports:
-      - "7766:7777"
-    container_name: project_node_js-1
+      - "9999:7777"
+    container_name: app1
   
   node-js-2:
-    build: ./Nodejs-express-testapp-2
+    build: ./app2
     ports:
-       - "8866:8888"
-    container_name: project_node_js-2
+       - "8000:8888"
+    container_name: app2
 
   nginx:
     build: ./reverse-proxy
     ports:
       - "80:80"
-    container_name: project_reverse-proxy
+    container_name: nginx-reverse-proxy
