@@ -1,13 +1,13 @@
 version: "3"
 services:
 
-  node-js-1:
+  java-test-app1:
     build: ./app1
     ports:
       - "9999:7777"
     container_name: app1
   
-  node-js-2:
+  java-test-app2:
     build: ./app2
     ports:
        - "8000:8888"
