@@ -4,17 +4,17 @@ services:
   java-test-app1:
     image: yasserebid/app1:v1
     ports:
-      - "9999:7777"
+      - "9999:8080"
     container_name: app1
   
   java-test-app2:
     build: ./app2
     ports:
-       - "8000:8888"
+       - "8000:8080"
     container_name: app2
 
   nginx:
-    image: yasserebid/nginx-reverse-proxy:v1
+    image: yasserebid/nginx-reverse-proxy:v2
     ports:
       - "80:80"
     container_name: nginx-reverse-proxy
